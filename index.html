@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="background">
+<div class="nav">
+    <a class="a active" href="#">HOME</a>
+    <a class="b" href="#">ABOUT ME</a>
+    <a class="c" href="#">GALLERY</a>
+    <a class="d" href="#">CONTACT</a>
+</div>
+</div>
+
+<div class="content">
+    <div class="home">
+        <h1>I am Mukhotho Vhonani</h1>
+        <h3>Student - University of Cape Town</h3>
+    </div>
+    <div class="aboutme">
+        <p><b>Background</b><br>
+
+            My full names are Mukhotho Vhonani Christopher. <br>
+            I was born and raised in Limpopo province (South Africa) in a vallage called Matangari. I attended Matangari primary school where I finished my grade 7 and attended Mphalaleni high school.
+            I wrote my matric in November 2018.
+            I am currently attending at the University of Cape Town.
+            
+        
+    </div>
+    <div class="gallery">
+    <h1>Hello I am gallery</h1>
+        <div class="image">
+            <img src="images/i1.jpg" alt="image_1">
+        </div>
+        <div class="image">
+            <img src="images/i2.jpg" alt="image_2">
+        </div>
+    </div>
+    <div class="contactus">
+        <div class="adress">
+            <h3>Physical Adress</h3>
+            <p>Respublica Roscommon House <br>
+            125 Main Rd <br>
+            Claremont <br>
+            Cape Town <br>
+            7708</p>
+            <br>
+        </div>
+       <div class="contact">
+           <h3>Email me</h3>
+           <p>mukhothovhonani23@gmail.com</p>   <a href="mailto:mukhothovhonani23@gmail.com.com">send here</a>
+            <br>
+            <br>
+            <h3>Call me</h3>
+            <p>+2771-368-6231</p>   <a href="tel:+27713686231">call here</a>
+            <br>
+            <br>
+            <h3>Whatsapp me</h3>
+            <p>+2771-368-6321</p>   <a href="http://wa.me/27713686231" target="_blank">chat here</a>
+        
+       </div> 
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type= "text/javascript">
+    $(document).ready(function(){
+        $('a').click(function(){
+            //alert("i am click");
+            var selected = $(this);
+            $('a').removeClass('active');
+            $(selected).addClass('active');
+        });
+        var $a = $('.a'),
+        $b = $('.b'),
+        $c = $('.c'),
+        $d = $('.d'),
+        $home = $('.home'),
+        $aboutme = $('.aboutme')
+        $gallery = $('.gallery')
+        $contactus = $('.contactus');
+
+        $a.click(function(){
+            $home.fadeIn();
+            $aboutme.fadeOut();
+            $gallery.fadeOut();
+            $contactus.fadeOut();
+        });
+        $b.click(function(){
+            $aboutme.fadeIn();
+            $home.fadeOut(); 
+            $gallery.fadeOut();
+            $contactus.fadeOut();  
+        });
+        $c.click(function(){
+            $gallery.fadeIn();
+            $home.fadeOut();
+            $aboutme.fadeOut();
+            $contactus.fadeOut();
+        });
+        $d.click(function(){
+            $contactus.fadeIn();
+            $home.fadeOut();
+            $aboutme.fadeOut();
+            $gallery.fadeOut();
+        });
+    });
+</script>
+</body>
+</html>
